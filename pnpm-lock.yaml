@@ -1,6 +1,7 @@
 dependencies:
   fastify: 2.9.0
   fastify-cli: 1.2.0
+  fastify-cors: 2.1.3
   mongoose: 5.7.3_mongoose@5.7.3
 devDependencies:
   nodemon: 1.19.3
@@ -541,6 +542,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-nWFK1tNQnRq2fCMnLi6gfP4MTNrT4I/zMhPQYnfxU6zXFgMPjc3IO4b4xbWwOJPBLzDeM6ubGtb7FhrMQa8qqA==
+  /fastify-cors/2.1.3:
+    dependencies:
+      fastify-plugin: 1.6.0
+      vary: 1.1.2
+    dev: false
+    resolution:
+      integrity: sha512-ZHFzKn1DddymsxzvdtjEQfkuMfGgwcp++FKuTTMmAN2KFB7hJRmOINffjfRdmUcgXdE4LoSy5XJROWKx/b+CPQ==
   /fastify-plugin/1.6.0:
     dependencies:
       semver: 6.3.0
@@ -2001,6 +2009,12 @@ packages:
   /util-deprecate/1.0.2:
     resolution:
       integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+  /vary/1.1.2:
+    dev: false
+    engines:
+      node: '>= 0.8'
+    resolution:
+      integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
   /walker/1.0.7:
     dependencies:
       makeerror: 1.0.11
@@ -2055,5 +2069,6 @@ packages:
 specifiers:
   fastify: ^2.9.0
   fastify-cli: ^1.2.0
+  fastify-cors: ^2.1.3
   mongoose: ^5.7.3
   nodemon: ^1.19.3

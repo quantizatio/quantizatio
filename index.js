@@ -7,6 +7,10 @@ mongoose.connect('mongodb://localhost/quantom')
   .then(() => console.log('MongoDB connected…')) 
   .catch(err => console.log(err))
 
+fastify.register(require('fastify-cors'), { 
+  origin: true,
+})
+
 fastify.get('/', async (request, reply) => {
   const account = await Account.findOne()
   return account
