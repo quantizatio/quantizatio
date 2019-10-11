@@ -1,6 +1,7 @@
 const fastify = require('fastify')()
 const mongoose = require('mongoose')
 const Account = require('./model')
+const Portfolio = require('./models/portfolio')
 
 // Connect to DB
 mongoose.connect('mongodb://localhost/quantom') 
@@ -14,6 +15,11 @@ fastify.register(require('fastify-cors'), {
 fastify.get('/', async (request, reply) => {
   const account = await Account.findOne()
   return account
+})
+
+fastify.get('/portfolio', async (request, reply) => {
+  const portfolio = await Portfolio.findOne()
+  return portfolio
 })
 
 const start = async () => {
